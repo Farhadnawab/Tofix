@@ -1,0 +1,21 @@
+/*---------------------COLOURS
+-------------------------------------------------------------*/
+/*---------------------TIMES
+-------------------------------------------------------------*/
+/*---------------------MEASURES
+-------------------------------------------------------------*/
+/* line 3, sass/contactCTA.scss */
+#contactSection {
+  text-align: center;
+  background-image: url("../assets/contact/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  /* line 10, sass/contactCTA.scss */
+  #contactSection .button {
+    margin: 0px;
+    color: #ffffff;
+    border-color: #ffffff; }
+    /* line 15, sass/contactCTA.scss */
+    #contactSection .button:hover {
+      border-color: #f27f59; }

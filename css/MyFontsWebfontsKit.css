@@ -1,0 +1,37 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3879836, 2020-03-13T10:22:10-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Eina01-SemiBold by Extratype
+ * URL: https://www.myfonts.com/fonts/textaxis/eina/01-semibold/
+ * 
+ * Webfont: Eina01-Regular by Extratype
+ * URL: https://www.myfonts.com/fonts/textaxis/eina/01-regular/
+ * 
+ * 
+ * Webfonts copyright: Copyright (c) 2013 Textaxis. v 1.0 by I&amp;#x00F1;igo Jerez. Barcelona. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3b339c");
+  
+@font-face {
+  src: url('../assets/webFonts/Eina01-SemiBold/font.eot');
+  font-family: 'Eina01-SemiBold';
+  src: url('../assets/webFonts/Eina01-SemiBold/font.woff2') format('woff2'), url('../assets/webFonts/Eina01-SemiBold/font.woff') format('woff'), url('../assets/webFonts/Eina01-SemiBold/font.eot?#iefix') format('embedded-opentype'), url('../assets/webFonts/Eina01-SemiBold/font.ttf') format('truetype');
+}
+@font-face {
+  src: url('../assets/webFonts/Eina01-Regular/font.eot');
+  font-family: 'Eina01-Regular';
+  src: url('../assets/webFonts/Eina01-Regular/font.woff2') format('woff2'), url('../assets/webFonts/Eina01-Regular/font.woff') format('woff'), url('../assets/webFonts/Eina01-Regular/font.eot?#iefix') format('embedded-opentype'), url('../assets/webFonts/Eina01-Regular/font.ttf') format('truetype');
+}
+

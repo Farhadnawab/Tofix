@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+  <g id="france" transform="translate(0 -6)">
+    <path id="Path_151" data-name="Path 151" d="M5.333,18H.667A.666.666,0,0,1,0,17.333V6.667A.666.666,0,0,1,.667,6H5.333Z" fill="#01209f"/>
+    <path id="Path_152" data-name="Path 152" d="M37.333,17.333a.666.666,0,0,1-.667.667H32V6h4.667a.666.666,0,0,1,.667.667Z" transform="translate(-21.333)" fill="#ef4234"/>
+    <rect id="Rectangle_165" data-name="Rectangle 165" width="5.333" height="12" transform="translate(5.333 6)" fill="#e6e6e6"/>
+  </g>
+</svg>

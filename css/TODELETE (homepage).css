@@ -1,0 +1,40 @@
+/*---------------------COLOURS
+-------------------------------------------------------------*/
+/*---------------------TIMES
+-------------------------------------------------------------*/
+/*---------------------MEASURES
+-------------------------------------------------------------*/
+/* line 3, sass/homepage.scss */
+body.homepage {
+  background-color: #120d21;
+  margin: 0px; }
+@keyframes copycat {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+  /* line 16, sass/homepage.scss */
+  body.homepage > .overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; }
+    /* line 24, sass/homepage.scss */
+    body.homepage > .overlay::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100vh;
+      width: 100vw;
+      background-image: url("../assets/home/hero.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: copycat 10s forwards ease-out; }
+  /* line 42, sass/homepage.scss */
+  body.homepage section {
+    background: none; }
