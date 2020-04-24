@@ -1,5 +1,6 @@
-var batchTotal, glideOffset, transformGrid, minHLX = -160, minHLY = -160;
+/*var batchTotal, glideOffset, transformGrid, minHLX = -160, minHLY = -160;
 var grid = document.getElementById("grid"); 
+//var 2 = document.getElementById("grid"); 
 
 function getBatchSize() {
     let trX, trY, rX, rZ;
@@ -60,7 +61,7 @@ function getBatchSize() {
     transformGrid = "translateX("+trX+"vw) translateY("+trY+"vh) rotateX("+rX+"deg) rotateZ("+rZ+"deg)";
     grid.style.transform = transformGrid;
 }
-getBatchSize();
+//getBatchSize();
             
 let boxShadowOpt = " 10px 0px rgba(0,0,0,0.5)";
 
@@ -165,15 +166,7 @@ function slide() {
             slideRepeatTimeout = setTimeout(slide, timeSlider);
         }
     });
-}
-
-
-function initializeVideo(elem){
-    $(elem).each(function(){
-        $(this)[0].play();
-        $(this)[0].loop = true;
-    });
-}
+}*/
 
 //window.setInterval(function(){
 //  /// call your function here
@@ -184,16 +177,27 @@ function initializeVideo(elem){
 //    }, 1000);
 
 
+function initializeVideo(elem){
+    $(elem).each(function(){
+        $(this)[0].play();
+        $(this)[0].loop = true;
+    });
+}
 $(document).ready(function() {
     setTimeout(function() {
-        $('.grid').masonry({
+        /*$('.grid').masonry({
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
             transitionDuration: 0
-        });
+        });*/
 
-        slide();
+        //slide();
         document.getElementById("sh").style.opacity=1;
+        var clone = $(".slideshow .grid").clone();
+        clone.appendTo(".slideshow .grid").addClass("duplicated");
+        clone.prependTo(".slideshow .grid").addClass("duplicated");
+
+        
     }, 200)
 
     initializeVideo(".video-elem");
@@ -203,12 +207,12 @@ $(document).ready(function() {
 
 var timerResize = false;
 window.onresize = function(event) {
-    getBatchSize();
+    /*getBatchSize();
     $(grid).masonry('reloadItems')
     if (!timerResize) {
         clearTimeout(slideRepeatTimeout);
         slide();
         timerResize = true;
         setTimeout(function() { timerResize = false }, 2000)
-    }
+    }*/
 };
