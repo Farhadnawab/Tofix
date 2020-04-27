@@ -183,14 +183,28 @@ $(document).ready(function() {
         }, timeSlider);
 
 
-        console.log(groups.length);
+        //console.log(groups.length);
         slideRepeatTimeout = setTimeout(slide, timeSlider);
     }
 
     function initializeVideo(elem){
         $(elem).each(function(){
-            $(this)[0].play();
-            $(this)[0].loop = true;
+            
+            // Show loading animation.
+            var playPromise = $(this)[0].play();;
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Automatic playback started!
+                    // Show playing UI.
+                    $(this)[0].loop = true;
+                })
+                .catch(error => {
+                // Auto-play was prevented
+                // Show paused UI.
+                //console.log(error);
+                });
+            }
         });
     }
 
