@@ -89,28 +89,17 @@ $(document).ready(function() {
 
     var skippedItems=0;
     var slideRepeatTimeout;
-    
-    var moveSlider = function(){
-        
-        slideOffset -= glideOffset;
-        $(grid).animate({  fake: slideOffset }, {
-            step: function(now,fx) {
-                
-                $(this).css('-webkit-transform',transformGrid + ' translate3d(0px, '+(now)+'px, 0px)'); 
-            },
-            duration:timeGlide,
-            easing: 'easeInOutCubic'
-        });
+    var Hgroups = $(grid).masonry('getItemElements');
+    var highlightGroup = function(){
 
-        var groups = $(grid).masonry('getItemElements');
         var group = [];
         for (let i = 0; i < batchTotal; i++) {
-            group.push($(groups[i])); //Pick start 6 items
+            group.push($(Hgroups[i+skippedItems])); //Pick start 6 items
         }
-        
-        // Highlight group
+        skippedItems += batchTotal;
+
+        let zindex = 1;
         setTimeout(function() {
-            let zindex = 1;
             group.forEach(function (e) {
                 let timeOffset = getRandomInt(-300, 300);
                 e.css('z-index', (zindex++)%2);
@@ -118,7 +107,7 @@ $(document).ready(function() {
                 let transformX = getRandomInt(minHLX, -10)
                 let transformY = transformX//+getRandomInt(-30,30);//getRandomInt(minHLY, -10)
                 let offsetY = getRandomInt(-40, 40);
-
+                
                 let offX, offY;
                 img.animate({
                     fake1: transformX,
@@ -137,9 +126,23 @@ $(document).ready(function() {
                     easing: 'easeOutCirc'
                 });
             });
-        }, 300)
+        }, 300);
+    }
+    
+    var moveSlider = function(){
+        
+        slideOffset -= glideOffset;
+        $(grid).animate({  fake: slideOffset }, {
+            step: function(now,fx) {
+                
+                $(this).css('-webkit-transform',transformGrid + ' translate3d(0px, '+(now)+'px, 0px)'); 
+            },
+            duration:timeGlide,
+            easing: 'easeInOutCubic'
+        });
 
         slideRepeatTimeout = setTimeout(moveSlider, timeSlider);
+        slideRepeatTimeout = setTimeout(highlightGroup, timeSlider);
     }
    
 
@@ -194,7 +197,7 @@ $(document).ready(function() {
     setTimeout(function() {
         
         moveSlider();
-
+        highlightGroup();
         setTimeout(() => {
             slide();    
         }, 1000);
